@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Local Taxi Service in Mumbai | Local Cab Booking | Gosafarcabs</title>
+<meta name="description" content="Book a local taxi in Mumbai with Gosafarcabs. Hourly packages, airport transfers, point to point rides and outstation cars with verified drivers. Call +91-9322997709.">
+<meta name="keywords" content="local taxi service in Mumbai, Mumbai local cab booking, hourly cab Mumbai, Mumbai airport taxi, outstation cab from Mumbai">
+<link rel="canonical" href="https://www.gosafarcabs.com/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Local Taxi Service in Mumbai | Gosafarcabs">
+<meta property="og:description" content="Hourly, airport and point to point cabs in Mumbai with clear fares and verified drivers.">
+<meta property="og:url" content="https://www.gosafarcabs.com/">
+<meta property="og:image" content="https://www.gosafarcabs.com/images/mumbai-local-cab-rental.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Structured data: business -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TaxiService",
+  "name": "Gosafarcabs",
+  "url": "https://www.gosafarcabs.com/",
+  "telephone": "+91-9322997709",
+  "image": "https://www.gosafarcabs.com/images/mumbai-local-cab-rental.png",
+  "slogan": "Your Journey, Our Responsibility",
+  "areaServed": {"@type": "City", "name": "Mumbai"},
+  "openingHours": "Mo-Su 00:00-23:59"
+}
+</script>
+<!-- Structured data: FAQ (must match the visible FAQ below) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"What is a local taxi service in Mumbai?","acceptedAnswer":{"@type":"Answer","text":"It covers rides inside Mumbai such as office trips, hospital visits, shopping, station drops and hourly bookings."}},
+    {"@type":"Question","name":"How are local taxi fares decided at Gosafarcabs?","acceptedAnswer":{"@type":"Answer","text":"Fares depend on the car type, distance and pickup area. We tell you the fare before the trip starts."}},
+    {"@type":"Question","name":"How can I book a local taxi near me in Mumbai?","acceptedAnswer":{"@type":"Answer","text":"Use the booking form, call +91-9322997709 or message us on WhatsApp with your pickup point, date and time."}},
+    {"@type":"Question","name":"Do you offer hourly cab packages in Mumbai?","acceptedAnswer":{"@type":"Answer","text":"Yes. We offer 4 hour 40 km, 8 hour 80 km and 12 hour 120 km packages."}},
+    {"@type":"Question","name":"Can I book a cab at short notice?","acceptedAnswer":{"@type":"Answer","text":"Yes. Call us and we will arrange the nearest available car and driver."}},
+    {"@type":"Question","name":"Do you provide Mumbai airport pickup and drop?","acceptedAnswer":{"@type":"Answer","text":"Yes. We run pickups and drops for Mumbai and Navi Mumbai airports."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="/">Gosafar<span>cabs</span></a>
+    <nav aria-label="Main">
+      <a href="#fare">Fare</a><a href="#hourly">Hourly</a><a href="#outstation">Outstation</a><a href="#faq">FAQ</a>
+    </nav>
+    <a class="call" href="tel:+919322997709">Call +91-9322997709</a>
+  </div>
+</header>
+
+<main>
+<!-- HERO + BOOKING FORM (start) -->
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Local Taxi Service in Mumbai | Local Cab Booking</h1>
+      <p>Hourly cars, airport pickups and city rides with verified drivers. You know the fare before you book.</p>
+
+      <form class="book" id="bookingForm" novalidate>
+        <div class="tabs" role="tablist" aria-label="Trip type">
+          <button type="button" role="tab" aria-selected="true" data-main="outstation">Outstation</button>
+          <button type="button" role="tab" aria-selected="false" data-main="local">Local</button>
+        </div>
+
+        <div id="outstation">
+          <div class="tabs sub" role="tablist" aria-label="Outstation type">
+            <button type="button" role="tab" aria-selected="true" data-sub="oneway">One way</button>
+            <button type="button" role="tab" aria-selected="false" data-sub="round">Round trip</button>
+          </div>
+          <label for="from">Pickup city</label>
+          <input id="from" value="Mumbai" autocomplete="off">
+          <label for="to">Drop city</label>
+          <input id="to" placeholder="e.g. Pune" autocomplete="off">
+          <div class="row">
+            <div><label for="date1">Pickup date</label><input type="date" id="date1"></div>
+            <div><label for="time1">Pickup time</label><input type="time" id="time1"></div>
+          </div>
+          <div id="returnBox" class="hide">
+            <label for="date2">Return date</label><input type="date" id="date2">
+          </div>
+        </div>
+
+        <div id="local" class="hide">
+          <div class="tabs sub" role="tablist" aria-label="Local type">
+            <button type="button" role="tab" aria-selected="true" data-sub="hourly">Hourly</button>
+            <button type="button" role="tab" aria-selected="false" data-sub="airport">Airport transfer</button>
+          </div>
+          <div id="hourlyBox">
+            <label for="pkg">Package</label>
+            <select id="pkg"><option>4 hours / 40 km</option><option>8 hours / 80 km</option><option>12 hours / 120 km</option></select>
+          </div>
+          <div id="airportBox" class="hide">
+            <label for="dir">Direction</label>
+            <select id="dir"><option>Pickup from airport</option><option>Drop to airport</option></select>
+            <label for="airport">Airport</label>
+            <select id="airport"><option>Mumbai Airport (T1 / T2)</option><option>Navi Mumbai Airport</option></select>
+            <label for="area">Your area</label>
+            <input id="area" placeholder="e.g. Andheri West">
+          </div>
+          <div class="row">
+            <div><label for="date3">Date</label><input type="date" id="date3"></div>
+            <div><label for="time3">Time</label><input type="time" id="time3"></div>
+          </div>
+        </div>
+
+        <label for="mobile">Mobile number</label>
+        <input id="mobile" type="tel" inputmode="numeric" maxlength="10" placeholder="10-digit mobile number">
+        <button class="go" type="submit">Get fare on WhatsApp</button>
+        <p class="note" id="msg" role="status"></p>
+      </form>
+    </div>
+    <img src="images/mumbai-local-cab-rental.png" alt="Gosafarcabs Innova local cab rental in Mumbai with Gateway of India" width="900" height="450" fetchpriority="high">
+  </div>
+</div>
+<!-- HERO + BOOKING FORM (end) -->
+
+<section>
+  <div class="wrap">
+    <h2>Local Taxi Service in Mumbai by Gosafarcabs</h2>
+    <p>Most days in Mumbai are not long highway trips. You are heading to work, a hospital, the railway station or a client meeting inside the city. Gosafarcabs is built for exactly these rides. We cover the island city and the suburbs with clean cars, verified drivers and fares explained up front.</p>
+    <ul class="ticks">
+      <li>Safe and reliable rides with verified drivers</li>
+      <li>Spacious, comfortable Innova and other cars</li>
+      <li>Experienced drivers who know Mumbai's roads</li>
+      <li>24/7 phone and WhatsApp support</li>
+    </ul>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>What Is a Local Cab Service in Mumbai and Who Needs It?</h2>
+    <p>A local cab is a taxi used for travel inside city limits. It can be a single point to point ride, a trip with a few stops, or a car kept with you for several hours. People who use it most are office goers, senior citizens going for check-ups, students, families on errands, business visitors and tourists seeing the city. If you want a driver you can rely on without waiting for an app to find one, a local cab booking is the simple answer.</p>
+
+    <h2>Local Taxi Booking in Mumbai</h2>
+    <p>Booking takes a couple of minutes. Fill the form on this page, call <a href="tel:+919322997709">+91-9322997709</a> or send us a WhatsApp message with your pickup point, drop point, date and time. We reply with the fare and, before pickup, the driver and car details.</p>
+  </div>
+</section>
+
+<section id="fare">
+  <div class="wrap">
+    <h2>Local Taxi Fare in Mumbai</h2>
+    <p>Our fares are set by car type and are shared with you before the ride, so there is no surprise at the end of the trip.</p>
+    <div class="scroll">
+      <table>
+        <caption class="note">Local taxi rates in Mumbai by car type</caption>
+        <thead><tr><th>Car type</th><th>Rate per km</th><th>Minimum fare</th><th>Best for</th></tr></thead>
+        <tbody>
+          <!-- TODO: replace XX / XXX with your real rates -->
+          <tr><td>Hatchback</td><td>Rs. 12 / km</td><td>Rs. 100</td><td>Daily budget rides</td></tr>
+          <tr><td>Sedan</td><td>Rs. 14 / km</td><td>Rs. 120</td><td>Comfortable city travel</td></tr>
+          <tr><td>SUV / Innova</td><td>Rs. 18 / km</td><td>Rs. 150</td><td>Families and luggage</td></tr>
+          <tr><td>Premium sedan</td><td>Rs. 22 / km</td><td>Rs. 200</td><td>Business and client trips</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Final fare depends on pickup area and time of day. It is confirmed at the time of booking.</p>
+  </div>
+</section>
+
+<section class="alt" id="hourly">
+  <div class="wrap">
+    <h2>Hourly Cab Service in Mumbai</h2>
+    <p>Some days you need a car and driver for a few hours, not just one drop. Think of meetings in different areas, a round of shopping, or hospital visits with waiting time. An hourly package gives you a fixed number of hours and kilometres at a set price.</p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Package</th><th>Included</th><th>Starting fare</th></tr></thead>
+        <tbody>
+          <tr><td>4 hours</td><td>40 km</td><td>From Rs. 699</td></tr>
+          <tr><td>8 hours</td><td>80 km</td><td>From Rs. 1099</td></tr>
+          <tr><td>12 hours</td><td>120 km</td><td>From Rs. 1599</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Extra hours or kilometres are charged at the rate agreed at booking.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Local Taxi for Daily Commute in Mumbai</h2>
+    <p>If you travel to the same office every day, a regular cab can save time and effort. Tell us your timings and route and we can plan a fixed pickup and drop on a monthly basis. It is a steady option on days when trains and buses are crowded or delayed.</p>
+
+    <h2>Point to Point Taxi in Mumbai</h2>
+    <p>Give us your exact pickup and drop locations and the driver takes the best route for that time of day. Our drivers know which roads clog at peak hours and where to stop near hospitals, stations, malls and offices, so you reach on time.</p>
+
+    <h2>Affordable Local Cab in Mumbai</h2>
+    <p>Affordable should not mean poor service. We keep fares fair for everyday riders and offer hatchbacks for budget trips and larger cars when you need more room. Regular riders can ask us about weekly and monthly booking options.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>Same Day Taxi Booking in Mumbai</h2>
+    <p>Plans change fast in Mumbai. If you need a cab today, call or message us and we will send the nearest available car. Same day bookings are handled around the clock, every day of the year.</p>
+
+    <h2>Local Cab Near Me in Mumbai</h2>
+    <p>We keep drivers positioned across residential and business areas so that pickup times stay short. Share your location and we assign the driver closest to you.</p>
+
+    <h2>Short Distance Cab in Mumbai</h2>
+    <p>A two kilometre ride matters as much as a two hundred kilometre one. We accept short bookings such as a drop to the metro, a hospital visit or a trip to the mall, and treat every ride with the same care.</p>
+
+    <h2>Mumbai Airport Taxi Service</h2>
+    <p>Need a pickup or drop at Mumbai Airport (T1 and T2) or Navi Mumbai Airport? Book a fixed fare airport transfer with a driver who arrives on time and helps with your luggage.</p>
+  </div>
+</section>
+
+<section id="outstation">
+  <div class="wrap">
+    <h2>Outstation Car Rental Fare from Mumbai</h2>
+    <p>Going out of the city? Choose the car that fits your group. The table below shows our starting outstation fares.</p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Pickup city</th><th>Vehicle</th><th>Fare starting from</th><th>Minimum km</th><th>Rate per km</th></tr></thead>
+        <tbody>
+          <tr><td>Mumbai</td><td>Dzire or similar (Sedan)</td><td>Rs. 3600</td><td>300 km</td><td>Rs. 12</td></tr>
+          <tr><td>Mumbai</td><td>Ertiga or similar (SUV AC)</td><td>Rs. 4500</td><td>300 km</td><td>Rs. 14</td></tr>
+          <tr><td>Mumbai</td><td>Innova (SUV AC)</td><td>Rs. 5100</td><td>300 km</td><td>Rs. 17</td></tr>
+          <tr><td>Mumbai</td><td>Innova Crysta (Premium SUV)</td><td>Rs. 6000</td><td>300 km</td><td>Rs. 19</td></tr>
+          <tr><td>Mumbai</td><td>Tempo Traveller, 17 seater</td><td>Rs. 8100</td><td>300 km</td><td>Rs. 27</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Toll, parking and state tax are as per actuals unless included in your quote.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>Gosafarcabs Also Offers</h2>
+    <ul class="ticks">
+      <li><strong>Outstation taxi from Mumbai:</strong> day trips and multi-day journeys to Pune, Nashik, Shirdi, Lonavala and Goa.</li>
+      <li><strong>Airport cab service:</strong> 24/7 pickups and drops.</li>
+      <li><strong>Corporate cabs:</strong> monthly packages for staff travel.</li>
+      <li><strong>Tour packages:</strong> car and driver for your holiday plan.</li>
+    </ul>
+
+    <h2>Available Cabs from Mumbai</h2>
+    <!-- Add <a href> links here once you create a page for each route -->
+    <ul class="cols">
+      <li>Mumbai to Pune cab</li><li>Mumbai to Nashik cab</li><li>Mumbai to Shirdi cab</li>
+      <li>Mumbai to Lonavala cab</li><li>Mumbai to Goa cab</li><li>Mumbai to Alibag cab</li>
+      <li>Mumbai to Kolhapur cab</li><li>Mumbai to Surat cab</li><li>Mumbai to Ahmedabad cab</li>
+      <li>Mumbai to Imagica cab</li><li>Mumbai to Khandala cab</li><li>Mumbai to Trimbakeshwar cab</li>
+      <li>Mumbai airport taxi</li><li>Navi Mumbai airport cab</li><li>Corporate taxi in Mumbai</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>How to Book a Local Taxi in Mumbai with Gosafarcabs</h2>
+    <ol>
+      <li>Open the booking form or call our support team.</li>
+      <li>Enter your pickup and drop location.</li>
+      <li>Choose the car you want.</li>
+      <li>Select the date and time.</li>
+      <li>Check the details and confirm the fare.</li>
+      <li>Pay online or in cash as agreed.</li>
+      <li>Receive confirmation with driver and car details.</li>
+      <li>The driver reaches your pickup point on time.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="alt faq" id="faq">
+  <div class="wrap">
+    <h2>Frequently Asked Questions</h2>
+    <details><summary>What is a local taxi service in Mumbai?</summary><p>It covers rides inside Mumbai such as office trips, hospital visits, shopping, station drops and hourly bookings.</p></details>
+    <details><summary>How are local taxi fares decided at Gosafarcabs?</summary><p>Fares depend on the car type, distance and pickup area. We tell you the fare before the trip starts.</p></details>
+    <details><summary>How can I book a local taxi near me in Mumbai?</summary><p>Use the booking form, call +91-9322997709 or message us on WhatsApp with your pickup point, date and time.</p></details>
+    <details><summary>Do you offer hourly cab packages in Mumbai?</summary><p>Yes. We offer 4 hour 40 km, 8 hour 80 km and 12 hour 120 km packages.</p></details>
+    <details><summary>Can I book a cab at short notice?</summary><p>Yes. Call us and we will arrange the nearest available car and driver.</p></details>
+    <details><summary>Do you provide Mumbai airport pickup and drop?</summary><p>Yes. We run pickups and drops for Mumbai and Navi Mumbai airports.</p></details>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta">
+      <h2 style="color:#fff">Local Taxi Service in Mumbai Contact Number</h2>
+      <p>Call or message us for a quick fare and booking, any time of day.</p>
+      <a href="tel:+919322997709">Call +91-9322997709</a>
+      <a href="https://wa.me/919322997709" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Gosafarcabs | Your Journey, Our Responsibility</p>
+    <p><a href="tel:+919322997709">+91-9322997709</a> | <a href="https://www.gosafarcabs.com">www.Gosafarcabs.com</a></p>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/919322997709" target="_blank" rel="noopener">WhatsApp us</a>
+<script src="js/booking.js"></script>
+</body>
+</html>
